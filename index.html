@@ -72,10 +72,28 @@
             list-style: none;
             padding-left: 0;
         }
+        /* Correct the bullet points alignment */
         .section ul li {
             background: url('bullet.png') no-repeat left center;
-            padding-left: 25px;
+            background-size: 10px 10px; /* Adjust size as needed */
+            padding-left: 20px; /* Adjust padding to align the text */
             margin-bottom: 10px;
+            line-height: 1.6em; /* Adjust line height for better vertical alignment */
+        }
+        
+        /* Navigation bar link styles */
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px; /* Adjust padding for better spacing */
+            display: inline-block; /* Makes padding effective */
+        }
+        
+        /* Hover effect for links */
+        header nav ul li a:hover {
+            background-color: #e8491d; /* Color when mouse hovers over link */
+            border-radius: 5px; /* Rounded corners for hover effect */
         }
         .section p {
             text-align: justify;
