@@ -136,22 +136,22 @@
             padding-left: 30px; /* increase padding to make room for icon */
         }
 
-        /* Email icon */
-        .email-icon:before {
-            content: '\2709'; /* Unicode envelope symbol */
-            font-size: 16px;
+        .email-icon:before, .linkedin-icon:before, .huggingface-icon:before {
+            content: '';
             position: absolute;
-            margin-left: -25px;
+            left: 0;
+            top: 0;
+            width: 20px; /* Width of your icon image */
+            height: 20px; /* Height of your icon image */
+            background-size: cover;
         }
-
-        /* LinkedIn icon */
+        
+        .email-icon:before {
+            background-image: url('https://icons8.com/icon/12623/email');
+        }
+        
         .linkedin-icon:before {
-            background: url('https://icons8.com/icon/xuvGCOXi8Wyg/linkedin') no-repeat left center;
-            background-size: 10px 10px; 
-            font-family: 'Segoe UI Symbol';
-            font-size: 18px;
-            position: absolute;
-            margin-left: -25px;
+            background-image: url('https://icons8.com/icon/xuvGCOXi8Wyg/linkedin');
         }
 
         /* Hugging Face icon, there's no direct Unicode, so using a smiley as a placeholder */
