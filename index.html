@@ -64,14 +64,31 @@
         display: inline;
         margin-left: 15px;
     }
-    header nav ul li a {
-        color: white;
-        text-decoration: none;
-        padding: 5px 10px;
-        font-weight: bold;
-        display: inline-block;
-        vertical-align: middle;
-    }
+     /* Navigation bar link styles */
+     header nav ul li a {
+         color: #cccccc; /* Light grey color for better visibility */
+         text-decoration: none;
+         font-weight: bold;
+         padding: 5px 10px;
+         display: inline-block;
+     }
+     
+     /* FontAwesome Icons adjustments */
+     header nav ul li a:before {
+         color: inherit; /* This will apply the text color to the icons as well */
+     }
+     
+     /* Hover effect for links and icons */
+     header nav ul li a:hover, header nav ul li a:hover:before {
+         color: #ffffff; /* White color on hover */
+         background-color: #e8491d; /* Orange color for the background on hover */
+         border-radius: 5px; /* Rounded corners for hover effect */
+     }
+     
+     /* Ensure icons are vertically aligned with the text */
+     header nav ul li a[class*="icon"]:before {
+         vertical-align: middle;
+     }
     header nav ul li a[class*="icon"]:before {
         margin-right: 5px;
     }
