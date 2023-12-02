@@ -41,7 +41,7 @@
         <!-- Profile Section -->
         <div class="section">
             <h2>Profile</h2>
-            <p>Brief summary of your professional profile...</p>
+            <p>Skilled Machine Learning Engineer with expertise in enhancing large language models and deploying LLaMA-2 technologies. Recognized for significantly improving speech system efficiency by 120%. Originator of a high-demand Hugging Face model evidenced by over 6000 downloads. Innovated a talking avatar for my CV showcasing my technical and creative abilities.</p>
         </div>
 
         <!-- Skills Section -->
