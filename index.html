@@ -71,27 +71,33 @@
         display: inline;
         margin-left: 15px;
     }
-     /* Navigation bar link styles */
+     /* Icon styles for better alignment and size */
      header nav ul li a {
-         color: #cccccc; /* Light grey color for better visibility */
-         text-decoration: none;
-         font-weight: bold;
-         padding: 5px 10px;
-         display: inline-block;
+         color: green; /* or any color you prefer */
+         font-size: 1.2em; /* Increase font size for larger icons */
+         display: flex;
+         align-items: center; /* Centers the icon with the text vertically */
+         justify-content: center; /* Centers the content horizontally if needed */
+         width: 40px; /* Set a fixed width for each icon */
+         height: 40px; /* Set a fixed height for each icon */
+         border-radius: 50%; /* Optional: makes the icons circular */
+         margin-left: 10px; /* Adjusts the space between icons */
      }
      
-     /* FontAwesome Icons adjustments */
+     /* FontAwesome Icons adjustments with pseudo-elements */
      header nav ul li a:before {
-         color: inherit; /* This will apply the text color to the icons as well */
+         font-family: 'FontAwesome'; /* Ensures the correct font family for icons */
+         display: inline-block; /* Allows pseudo-elements to align properly */
+         text-align: center;
+         width: 100%; /* Aligns icon in the center of the fixed width */
      }
      
-     /* Hover effect for links and icons */
+     /* Adjust the hover effect */
      header nav ul li a:hover, header nav ul li a:hover:before {
          color: #ffffff; /* White color on hover */
          background-color: #e8491d; /* Orange color for the background on hover */
-         border-radius: 5px; /* Rounded corners for hover effect */
+         border-radius: 50%; /* Keeps the circular shape on hover */
      }
-     
      /* Ensure icons are vertically aligned with the text */
      header nav ul li a[class*="icon"]:before {
          vertical-align: middle;
@@ -99,15 +105,23 @@
     header nav ul li a[class*="icon"]:before {
         margin-right: 5px;
     }
-    .email-icon:before {
-        content: '\f0e0';
-    }
-    .linkedin-icon:before {
-        content: '\f0e1';
-    }
-    .huggingface-icon:before {
-        content: '\1F60A';
-    }
+     /* Email icon using FontAwesome */
+     .email-icon:before {
+         content: '\f0e0'; /* FontAwesome envelope icon */
+         color: #e8491d; /* or any color you prefer */
+     }
+     
+     /* LinkedIn icon using FontAwesome */
+     .linkedin-icon:before {
+         content: '\f0e1'; /* FontAwesome LinkedIn icon */
+         color: #0e76a8; /* LinkedIn's brand color */
+     }
+     
+     /* HuggingFace icon (no FontAwesome icon available, so using a smiley) */
+     .huggingface-icon:before {
+         content: '\1F917'; /* Unicode character for hugging face */
+         color: #e8491d; /* or any color you prefer */
+     }
     header nav ul li a:hover {
         background-color: #e8491d;
         border-radius: 5px;
