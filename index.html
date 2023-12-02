@@ -1,41 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Alhajar's Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        .container { width: 80%; margin: auto; overflow: hidden; }
-        header { background: #333; color: white; padding-top: 30px; min-height: 70px; border-bottom: #ffffff 3px solid; }
-        header a { color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 16px; }
-        header ul { padding: 0; margin: 0; list-style: none; overflow: hidden; }
-        header li { float: left; display: inline; padding: 0 20px 0 20px; }
-        header #branding { float: left; }
-        header #branding h1 { margin: 0; }
-        header nav { float: right; margin-top: 10px; }
-        header .highlight, header .current a { color: #e8491d; font-weight: bold; }
-        header a:hover { color: #ffffff; font-weight: bold; }
-        .button { height: 38px; background: #e8491d; border: none; padding-left: 20px; padding-right: 20px; color: #ffffff; }
-        .section { margin: 50px 0; }
-        .section h2 { color: #333; margin-bottom: 20px; }
-        .section ul { list-style: square; margin-left: 20px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            border-radius: 8px 8px 0 0;
+        }
+        header a, header a:visited {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header nav {
+            float: right;
+            margin-top: 5px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .section h2, .section h3 {
+            border-bottom: 1px solid #e8491d;
+            color: #333;
+            padding-bottom: 5px;
+        }
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .section ul li {
+            background: url('bullet.png') no-repeat left center;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .section p {
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div id="branding">
-                <h1>Mohamed Alhajar (4 Langauges Speaker)</h1>
+                <h1>Mohamed Alhajar (4 Languages Speaker)</h1>
             </div>
             <nav>
                 <ul>
                     <li class="current"><a href="mailto:alhajjarmohamed@gmail">Email</a></li>
                     <li><a href="https://www.linkedin.com/in/muhammed-alhajar/">LinkedIn</a></li>
                     <li><a href="https://huggingface.co/malhajar">HuggingFace</a></li>
-                    <!-- Add other links or social media profiles here -->
+                    <!-- Additional links can be added here -->
                 </ul>
             </nav>
         </div>
     </header>
+    
 
     <div class="container">
         <!-- Profile Section -->
