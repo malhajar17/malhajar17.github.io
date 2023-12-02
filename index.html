@@ -7,13 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Alhajar's Portfolio</title>
 <style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    }
+/* General styles */
+     body, header a, header a:visited, .section h2, .section h3, footer {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         margin: 0;
+         padding: 0;
+     }
+     
+     body {
+         line-height: 1.6;
+         background-color: #f4f4f4;
+     }
+     
+     /* Header styles */
+     header {
+         background: #333333; /* Dark gray background */
+         color: #DDDDDD; /* Soft white text */
+         padding-top: 20px;
+         padding-bottom: 20px;
+         border-radius: 8px 8px 0 0;
+     }
     .container {
         width: 80%;
         margin: auto;
@@ -24,13 +37,7 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-top: 30px;
     }
-    header {
-        background: #333;
-        color: white;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-radius: 8px 8px 0 0;
-    }
+
     header #branding, header nav {
         display: inline-block;
         vertical-align: top;
@@ -39,13 +46,10 @@
         width: 70%;
          
     }
-    header #branding h1 {
-        color: #e8491d;
-        margin: 0;
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 1.8em;
-    }
+     header #branding h1 {
+         color: #E8491D; /* Accent color */
+         font-size: 1.8em;
+     }
      .header-inner {
     display: flex;
     align-items: center;
@@ -71,25 +75,26 @@
         display: inline;
         margin-left: 15px;
     }
-     /* Icon styles for better alignment and size */
+     /* Navigation links */
      header nav ul li a {
-         color: green; /* or any color you prefer */
-         font-size: 1.2em; /* Increase font size for larger icons */
-         display: flex;
-         align-items: center; /* Centers the icon with the text vertically */
-         justify-content: center; /* Centers the content horizontally if needed */
-         width: 40px; /* Set a fixed width for each icon */
-         height: 40px; /* Set a fixed height for each icon */
-         border-radius: 50%; /* Optional: makes the icons circular */
-         margin-left: 10px; /* Adjusts the space between icons */
+         color: #DDDDDD; /* Soft white text */
+         text-decoration: none;
+         font-weight: bold;
+         padding: 5px 10px;
+         display: inline-block;
+         position: relative; /* Needed for absolute positioning of before pseudo-element */
      }
      
-     /* FontAwesome Icons adjustments with pseudo-elements */
+     /* Icon styles */
      header nav ul li a:before {
-         font-family: 'FontAwesome'; /* Ensures the correct font family for icons */
-         display: inline-block; /* Allows pseudo-elements to align properly */
+         font-family: 'FontAwesome';
+         color: inherit; /* Icon color matches the text color */
+         position: absolute;
+         left: 0;
+         top: 50%;
+         transform: translateY(-50%);
          text-align: center;
-         width: 100%; /* Aligns icon in the center of the fixed width */
+         width: 100%;
      }
      
      /* Adjust the hover effect */
@@ -104,28 +109,31 @@
      }
     header nav ul li a[class*="icon"]:before {
         margin-right: 5px;
-    }
-     /* Email icon using FontAwesome */
+         }
+     /* Email icon */
      .email-icon:before {
-         content: '\f0e0'; /* FontAwesome envelope icon */
-         color: #e8491d; /* or any color you prefer */
+         content: '\f0e0';
      }
      
-     /* LinkedIn icon using FontAwesome */
+     /* LinkedIn icon */
      .linkedin-icon:before {
-         content: '\f0e1'; /* FontAwesome LinkedIn icon */
-         color: #0e76a8; /* LinkedIn's brand color */
+         content: '\f0e1';
+         color: #0077B5; /* LinkedIn blue */
      }
      
-     /* HuggingFace icon (no FontAwesome icon available, so using a smiley) */
+     /* HuggingFace icon */
      .huggingface-icon:before {
-         content: '\1F917'; /* Unicode character for hugging face */
-         color: #e8491d; /* or any color you prefer */
+         content: '\1F917';
+         color: #E8491D; /* Accent color */
      }
-    header nav ul li a:hover {
-        background-color: #e8491d;
-        border-radius: 5px;
-    }
+
+
+     /* Hover effect for links and icons */
+     header nav ul li a:hover, header nav ul li a:hover:before {
+         color: #FFFFFF; /* White color on hover */
+         background-color: #E8491D; /* Accent color for the background on hover */
+         border-radius: 5px;
+     }
     .section h2, .section h3 {
         border-bottom: 1px solid #e8491d;
         color: #333;
