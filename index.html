@@ -98,6 +98,41 @@
             background-color: #e8491d; /* Color when mouse hovers over link */
             border-radius: 5px; /* Rounded corners for hover effect */
         }
+
+                 /* Styles for the header links with icons */
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            display: inline-block;
+            position: relative; /* Position relative to allow absolute positioning of pseudo-elements */
+        }
+
+        /* Using pseudo-elements for icons */
+        header nav ul li a:before {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome; /* Adjust font-size accordingly */
+            font-size: inherit; /* Icon font size should match text font size */
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            margin-right: 5px; /* Space between icon and text */
+        }
+
+        /* Email icon */
+        .email-icon:before {
+            content: '\f0e0'; /* FontAwesome envelope icon */
+        }
+
+        /* LinkedIn icon */
+        .linkedin-icon:before {
+            content: '\f0e1'; /* FontAwesome LinkedIn icon */
+        }
+
+        /* HuggingFace icon - FontAwesome doesn't have a HuggingFace icon, using a user icon as a placeholder */
+        .huggingface-icon:before {
+            content: '\f007'; /* FontAwesome user icon */
+        }
         .section p {
             text-align: justify;
         }
@@ -124,7 +159,10 @@
             padding: 20px 0;
             border-radius: 8px 8px 0 0;
         }
-        
+                /* Header title color change */
+        header #branding h1 {
+            color: #e8491d; /* Color that stands out against the dark background */
+        }
         /* Style for icons */
         .icon {
             display: inline-block;
@@ -166,9 +204,9 @@
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="mailto:alhajjarmohamed@gmail" class="email-icon fa fa-envelope"">Email</a></li>
-                    <li class="current"><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon fa fa-linkedin">LinkedIn</a></li>
-                    <li class="current"><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
+                    <li class="current"><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
+                    <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
                     <!-- Additional links can be added here -->
                 </ul>
             </nav>
