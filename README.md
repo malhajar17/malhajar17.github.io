@@ -28,8 +28,9 @@
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="mailto:your-email@example.com">Email</a></li>
-                    <li><a href="your-linkedin-url">LinkedIn</a></li>
+                    <li class="current"><a href="mailto:alhajjarmohamed@gmail">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/muhammed-alhajar/">LinkedIn</a></li>
+                    <li><a href="https://huggingface.co/malhajar">HuggingFace</a></li>
                     <!-- Add other links or social media profiles here -->
                 </ul>
             </nav>
