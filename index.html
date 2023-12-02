@@ -31,49 +31,86 @@
         padding-bottom: 20px;
         border-radius: 8px 8px 0 0;
     }
-    .header-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    header #branding, header nav {
+        display: inline-block;
+        vertical-align: top;
     }
+    header #branding {
+        width: 70%;
+         
+    }
+    header #branding h1 {
+        color: #e8491d;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.8em;
+    }
+     .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     }
+
     .profile-pic {
         width: 100px;
         height: 100px;
         border-radius: 50%;
         border: 3px solid white;
+        display: inline-block;
+        vertical-align: middle;
         margin-right: 15px;
     }
-    #branding h1 {
-        color: #e8491d;
-        margin: 0;
-        font-size: 2em;
-    }
-    nav ul {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        margin: 0;
+    header nav ul {
+        float: right;
         padding: 0;
+        list-style: none;
+        margin: 0;
     }
-    nav ul li {
+    header nav ul li {
+        display: inline;
         margin-left: 15px;
     }
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 5px 10px;
-        display: flex;
-        align-items: center;
+     /* Navigation bar link styles */
+     header nav ul li a {
+         color: #cccccc; /* Light grey color for better visibility */
+         text-decoration: none;
+         font-weight: bold;
+         padding: 5px 10px;
+         display: inline-block;
+     }
+     
+     /* FontAwesome Icons adjustments */
+     header nav ul li a:before {
+         color: inherit; /* This will apply the text color to the icons as well */
+     }
+     
+     /* Hover effect for links and icons */
+     header nav ul li a:hover, header nav ul li a:hover:before {
+         color: #ffffff; /* White color on hover */
+         background-color: #e8491d; /* Orange color for the background on hover */
+         border-radius: 5px; /* Rounded corners for hover effect */
+     }
+     
+     /* Ensure icons are vertically aligned with the text */
+     header nav ul li a[class*="icon"]:before {
+         vertical-align: middle;
+     }
+    header nav ul li a[class*="icon"]:before {
+        margin-right: 5px;
     }
-    nav ul li a i {
-        margin-right: 8px;
-        color: #e8491d;
-        font-size: 1.2em;
+    .email-icon:before {
+        content: '\f0e0';
     }
-    nav ul li a:hover {
-        text-decoration: underline;
-        background-color: transparent;
+    .linkedin-icon:before {
+        content: '\f0e1';
+    }
+    .huggingface-icon:before {
+        content: '\1F60A';
+    }
+    header nav ul li a:hover {
+        background-color: #e8491d;
+        border-radius: 5px;
     }
     .section h2, .section h3 {
         border-bottom: 1px solid #e8491d;
