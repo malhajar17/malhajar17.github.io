@@ -7,191 +7,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Alhajar's Portfolio</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 20px 0;
-            border-radius: 8px 8px 0 0;
-        }
-        header a, header a:visited {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-            overflow: hidden;
-        }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-            font-size: 1.8em;
-            color: #e8491d; /* This color will stand out against the dark background */
-        }
-        header nav {
-            float: right;
-            margin-top: 5px;
-        }
-        header .highlight, header .current a {
-            color: #e8491d;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #ffffff;
-            font-weight: bold;
-        }
-        .section h2, .section h3 {
-            border-bottom: 1px solid #e8491d;
-            color: #333;
-            padding-bottom: 5px;
-        }
-        .section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        /* Correct the bullet points alignment */
-        .section ul li {
-            background: url('bullet.png') no-repeat left center;
-            background-size: 10px 10px; /* Adjust size as needed */
-            padding-left: 20px; /* Adjust padding to align the text */
-            margin-bottom: 10px;
-            line-height: 1.6em; /* Adjust line height for better vertical alignment */
-        }
-        
-        /* Navigation bar link styles */
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px; /* Adjust padding for better spacing */
-            display: inline-block; /* Makes padding effective */
-        }
-        
-        /* Hover effect for links */
-        header nav ul li a:hover {
-            background-color: #e8491d; /* Color when mouse hovers over link */
-            border-radius: 5px; /* Rounded corners for hover effect */
-        }
+               /* General body styles */
+          body {
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              line-height: 1.6;
+              margin: 0;
+              padding: 0;
+              background-color: #f4f4f4;
+          }
+          
+          /* Container for content */
+          .container {
+              width: 80%;
+              margin: auto;
+              overflow: hidden;
+              background-color: #fff;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              margin-top: 30px;
+          }
+          
+          /* Header styles */
+          header {
+              background: #333;
+              color: white;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              border-radius: 8px 8px 0 0;
+          }
+          
+          /* Branding and navigation styles */
+          header #branding, header nav {
+              display: inline-block;
+              vertical-align: top;
+          }
+          
+          /* Branding and logo styles */
+          header #branding {
+              width: 70%;
+          }
+          
+          /* Header h1 style */
+          header #branding h1 {
+              color: #e8491d;
+              margin: 0;
+              display: inline-block;
+              vertical-align: middle;
+              font-size: 1.8em;
+          }
+          
+          /* Profile picture styles */
+          .profile-pic {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              border: 3px solid white;
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 15px;
+          }
+          
+          /* Navigation list styles */
+          header nav ul {
+              float: right;
+              padding: 0;
+              list-style: none;
+              margin: 0; /* Resets default margin */
+          }
+          
+          /* Navigation links styles */
+          header nav ul li {
+              display: inline;
+              margin-left: 15px; /* Adds spacing between nav items */
+          }
+          
+          /* Navigation links with icons */
+          header nav ul li a {
+              color: white;
+              text-decoration: none;
+              padding: 5px 10px;
+              font-weight: bold;
+              display: inline-block;
+              vertical-align: middle; /* Aligns icons with text vertically */
+          }
+          
+          /* FontAwesome Icons adjustments */
+          header nav ul li a[class*="icon"]:before {
+              margin-right: 5px; /* Space between icon and text */
+          }
+          
+          /* Email icon using FontAwesome */
+          .email-icon:before {
+              content: '\f0e0'; /* FontAwesome envelope icon */
+          }
+          
+          /* LinkedIn icon using FontAwesome */
+          .linkedin-icon:before {
+              content: '\f0e1'; /* FontAwesome LinkedIn icon */
+          }
+          
+          /* HuggingFace icon (placeholder using FontAwesome user icon) */
+          .huggingface-icon:before {
+              content: '\f007'; /* FontAwesome user icon */
+          }
+          
+          /* Hover effect for links */
+          header nav ul li a:hover {
+              background-color: #e8491d;
+              border-radius: 5px;
+          }
+          
+          /* Section headers styles */
+          .section h2, .section h3 {
+              border-bottom: 1px solid #e8491d;
+              color: #333;
+              padding-bottom: 5px;
+          }
+          
+          /* Section list styles */
+          .section ul {
+              list-style: none;
+              padding-left: 0;
+          }
+          
+          /* Bullet points alignment */
+          .section ul li {
+              background: url('bullet.png') no-repeat left center;
+              background-size: 10px 10px;
+              padding-left: 20px;
+              margin-bottom: 10px;
+              line-height: 1.6em;
+          }
+          
+          /* Text alignment */
+          .section p {
+              text-align: justify;
+          }
+          
+          /* Footer styles */
+          footer {
+              text-align: center;
+              padding: 10px 0;
+              background-color: #333;
+              color: white;
+              border-radius: 0 0 8px 8px;
+          }
 
-                 /* Styles for the header links with icons */
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-            display: inline-block;
-            position: relative; /* Position relative to allow absolute positioning of pseudo-elements */
-        }
-
-        /* Using pseudo-elements for icons */
-        header nav ul li a:before {
-            display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome; /* Adjust font-size accordingly */
-            font-size: inherit; /* Icon font size should match text font size */
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            margin-right: 5px; /* Space between icon and text */
-        }
-
-        /* Email icon */
-        .email-icon:before {
-            content: '\f0e0'; /* FontAwesome envelope icon */
-        }
-
-        /* LinkedIn icon */
-        .linkedin-icon:before {
-            content: '\f0e1'; /* FontAwesome LinkedIn icon */
-        }
-
-        /* HuggingFace icon - FontAwesome doesn't have a HuggingFace icon, using a user icon as a placeholder */
-        .huggingface-icon:before {
-            content: '\f007'; /* FontAwesome user icon */
-        }
-        .section p {
-            text-align: justify;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #333;
-            color: white;
-            border-radius: 0 0 8px 8px;
-        }
-        /* Add this to your <style> tag or your external CSS file */
-        .profile-pic {
-            width: 100px; /* adjust as needed */
-            height: 100px; /* adjust as needed */
-            border-radius: 50%;
-            border: 3px solid white;
-            margin-right: 15px;
-            float: left;
-        }
-        
-        header {
-            background: #333; /* Or any color other than white */
-            color: white;
-            padding: 20px 0;
-            border-radius: 8px 8px 0 0;
-        }
-                /* Header title color change */
-        header #branding h1 {
-            color: #e8491d; /* Color that stands out against the dark background */
-        }
-        /* Style for icons */
-        .icon {
-            display: inline-block;
-            width: 20px; /* fixed width for alignment */
-            text-align: center;
-        }
-
-        /* Updated nav link styles */
-        header nav ul li a {
-            /* ... existing styles ... */
-            padding-left: 30px; /* increase padding to make room for icon */
-        }
-
-        .email-icon:before, .linkedin-icon:before, .huggingface-icon:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 20px; /* Width of your icon image */
-            height: 20px; /* Height of your icon image */
-            background-size: cover;
-        }
-        /* Hugging Face icon, there's no direct Unicode, so using a smiley as a placeholder */
-        .huggingface-icon:before {
-            content: '\1F917'; /* Unicode character for hugging face */
-            font-size: 16px;
-            position: absolute;
-            margin-left: -25px;
-        }
 
     </style>
 </head>
@@ -205,8 +167,8 @@
             <nav>
                 <ul>
                     <li class="current"><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
-                    <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
+                    <li class="current"><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
+                    <li class="current"><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
                     <!-- Additional links can be added here -->
                 </ul>
             </nav>
