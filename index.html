@@ -6,156 +6,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Alhajar's Portfolio</title>
-    <style>
-               /* General body styles */
-          body {
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              line-height: 1.6;
-              margin: 0;
-              padding: 0;
-              background-color: #f4f4f4;
-          }
-          
-          /* Container for content */
-          .container {
-              width: 80%;
-              margin: auto;
-              overflow: hidden;
-              background-color: #fff;
-              padding: 20px;
-              border-radius: 8px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-              margin-top: 30px;
-          }
-          
-          /* Header styles */
-          header {
-              background: #333;
-              color: white;
-              padding-top: 20px;
-              padding-bottom: 20px;
-              border-radius: 8px 8px 0 0;
-          }
-          
-          /* Branding and navigation styles */
-          header #branding, header nav {
-              display: inline-block;
-              vertical-align: top;
-          }
-          
-          /* Branding and logo styles */
-          header #branding {
-              width: 70%;
-          }
-          
-          /* Header h1 style */
-          header #branding h1 {
-              color: #e8491d;
-              margin: 0;
-              display: inline-block;
-              vertical-align: middle;
-              font-size: 1.8em;
-          }
-          
-          /* Profile picture styles */
-          .profile-pic {
-              width: 100px;
-              height: 100px;
-              border-radius: 50%;
-              border: 3px solid white;
-              display: inline-block;
-              vertical-align: middle;
-              margin-right: 15px;
-          }
-          
-          /* Navigation list styles */
-          header nav ul {
-              float: right;
-              padding: 0;
-              list-style: none;
-              margin: 0; /* Resets default margin */
-          }
-          
-          /* Navigation links styles */
-          header nav ul li {
-              display: inline;
-              margin-left: 15px; /* Adds spacing between nav items */
-          }
-          
-          /* Navigation links with icons */
-          header nav ul li a {
-              color: white;
-              text-decoration: none;
-              padding: 5px 10px;
-              font-weight: bold;
-              display: inline-block;
-              vertical-align: middle; /* Aligns icons with text vertically */
-          }
-          
-          /* FontAwesome Icons adjustments */
-          header nav ul li a[class*="icon"]:before {
-              margin-right: 5px; /* Space between icon and text */
-          }
-          
-          /* Email icon using FontAwesome */
-          .email-icon:before {
-              content: '\f0e0'; /* FontAwesome envelope icon */
-          }
-          
-          /* LinkedIn icon using FontAwesome */
-          .linkedin-icon:before {
-              content: '\f0e1'; /* FontAwesome LinkedIn icon */
-          }
-          
-          /* HuggingFace icon (placeholder using FontAwesome user icon) */
-          .huggingface-icon:before {
-              content: '\f007'; /* FontAwesome user icon */
-          }
-          
-          /* Hover effect for links */
-          header nav ul li a:hover {
-              background-color: #e8491d;
-              border-radius: 5px;
-          }
-          
-          /* Section headers styles */
-          .section h2, .section h3 {
-              border-bottom: 1px solid #e8491d;
-              color: #333;
-              padding-bottom: 5px;
-          }
-          
-          /* Section list styles */
-          .section ul {
-              list-style: none;
-              padding-left: 0;
-          }
-          
-          /* Bullet points alignment */
-          .section ul li {
-              background: url('bullet.png') no-repeat left center;
-              background-size: 10px 10px;
-              padding-left: 20px;
-              margin-bottom: 10px;
-              line-height: 1.6em;
-          }
-          
-          /* Text alignment */
-          .section p {
-              text-align: justify;
-          }
-          
-          /* Footer styles */
-          footer {
-              text-align: center;
-              padding: 10px 0;
-              background-color: #333;
-              color: white;
-              border-radius: 0 0 8px 8px;
-          }
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+    }
+    header {
+        background: #333;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 8px 8px 0 0;
+    }
+    header #branding, header nav {
+        display: inline-block;
+        vertical-align: top;
+    }
+    header #branding {
+        width: 70%;
+    }
+    header #branding h1 {
+        color: #e8491d;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.8em;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid white;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+    header nav ul {
+        float: right;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+    header nav ul li {
+        display: inline;
+        margin-left: 15px;
+    }
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    header nav ul li a[class*="icon"]:before {
+        margin-right: 5px;
+    }
+    .email-icon:before {
+        content: '\f0e0';
+    }
+    .linkedin-icon:before {
+        content: '\f0e1';
+    }
+    .huggingface-icon:before {
+        content: '\f007';
+    }
+    header nav ul li a:hover {
+        background-color: #e8491d;
+        border-radius: 5px;
+    }
+    .section h2, .section h3 {
+        border-bottom: 1px solid #e8491d;
+        color: #333;
+        padding-bottom: 5px;
+    }
+    .section ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .section ul li {
+        background: url('bullet.png') no-repeat left center;
+        background-size: 10px 10px;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        line-height: 1.6em;
+    }
+    .section p {
+        text-align: justify;
+    }
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #333;
+        color: white;
+        border-radius: 0 0 8px 8px;
+    }
+</style>
 
-
-    </style>
 </head>
 <body>
     <header>
