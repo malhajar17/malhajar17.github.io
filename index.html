@@ -123,7 +123,43 @@
             border-radius: 8px 8px 0 0;
         }
         
-        /* ... rest of your styles ... */
+        /* Style for icons */
+        .icon {
+            display: inline-block;
+            width: 20px; /* fixed width for alignment */
+            text-align: center;
+        }
+
+        /* Updated nav link styles */
+        header nav ul li a {
+            /* ... existing styles ... */
+            padding-left: 30px; /* increase padding to make room for icon */
+        }
+
+        /* Email icon */
+        .email-icon:before {
+            content: '\2709'; /* Unicode envelope symbol */
+            font-size: 16px;
+            position: absolute;
+            margin-left: -25px;
+        }
+
+        /* LinkedIn icon */
+        .linkedin-icon:before {
+            content: '\f0e1'; /* Unicode character for LinkedIn-like icon */
+            font-family: 'Segoe UI Symbol';
+            font-size: 18px;
+            position: absolute;
+            margin-left: -25px;
+        }
+
+        /* Hugging Face icon, there's no direct Unicode, so using a smiley as a placeholder */
+        .huggingface-icon:before {
+            content: '\1F917'; /* Unicode character for hugging face */
+            font-size: 16px;
+            position: absolute;
+            margin-left: -25px;
+        }
 
     </style>
 </head>
@@ -136,9 +172,9 @@
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="mailto:alhajjarmohamed@gmail">Email</a></li>
-                    <li class="current"><a href="https://www.linkedin.com/in/muhammed-alhajar/">LinkedIn</a></li>
-                    <li class="current"><a href="https://huggingface.co/malhajar">HuggingFace</a></li>
+                    <li class="current"><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
+                    <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
                     <!-- Additional links can be added here -->
                 </ul>
             </nav>
