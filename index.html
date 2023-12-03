@@ -48,11 +48,20 @@ h1, h2, h3 {
 
 /* Header Styles */
 header {
-    background: var(--primary-color);
+     background: linear-gradient(to right, #333, #555);
     color: var(--text-color);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     border-radius: 8px 8px 0 0;
+     
+     
+}
+header #branding {
+    text-align: left; /* If you want the text to be left-aligned */
+    display: flex;
+    align-items: center;
+     font-size: 2.2em;
+    font-weight: bold;
 }
 
 header .header-inner {
@@ -70,6 +79,7 @@ header .header-inner {
     height: auto; /* Keeps the aspect ratio */
     display: inline-block;
     margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation Bar */
@@ -89,6 +99,15 @@ header nav ul {
 
 header nav ul li {
     margin-left: 15px;
+    padding: 10px 15px;
+}
+header nav ul li a {
+    padding: 5px 10px;
+     font-size: 1em;
+    color: var(--text-color);
+}
+header nav ul li a:hover {
+    transform: scale(1.05); /* Slightly enlarges the link on hover */
 }
 
 /* Links and Buttons */
@@ -138,6 +157,29 @@ footer {
 .section p {
     text-align: justify;
 }
+.tagline {
+    font-size: 1em;
+    color: #DDD;
+}
+@media (max-width: 768px) {
+    header .header-inner {
+        flex-direction: column;
+    }
+
+    header #branding {
+        margin-bottom: 20px;
+    }
+
+    header nav ul {
+        padding: 0;
+    }
+
+    header nav ul li {
+        display: block;
+        text-align: center;
+    }
+}
+     
 </style>
 
 </head>
@@ -146,7 +188,10 @@ footer {
         <div class="container">
             <div id="branding">
                 <img src="mohamed.png" alt="Mohamed Alhajar" class="profile-pic">
-                <h1>Mohamed Alhajar (4 Languages Speaker)</h1>
+                    <div>
+                       <h1>Mohamed Alhajar (4 Languages Speaker)</h1>
+                       <p class="tagline">Passionate Machine Learning Engineer | Building the future of AI</p>
+                   </div>
             </div>
             <nav>
                 <ul>
