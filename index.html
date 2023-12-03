@@ -7,161 +7,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Alhajar's Portfolio</title>
 <style>
-/* General styles */
-     body, header a, header a:visited, .section h2, .section h3, footer {
-         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-         margin: 0;
-         padding: 0;
-     }
-     
-     body {
-         line-height: 1.6;
-         background-color: #f4f4f4;
-     }
-     
-     /* Header styles */
-     header {
-         background: #333333; /* Dark gray background */
-         color: #DDDDDD; /* Soft white text */
-         padding-top: 20px;
-         padding-bottom: 20px;
-         border-radius: 8px 8px 0 0;
-     }
-    .container {
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin-top: 30px;
-    }
+/* Color Scheme */
+:root {
+    --primary-color: #5D5C61; /* Softened the dark gray */
+    --secondary-color: #7395AE; /* Added a complementary blue */
+    --accent-color: #E27D60; /* Softened the orange */
+    --text-color: #FFFFFF; /* Kept white for contrast */
+    --background-color: #E8A87C; /* A lighter complementary color for backgrounds */
+}
 
-    header #branding, header nav {
-        display: inline-block;
-        vertical-align: top;
-    }
-    header #branding {
-        width: 70%;
-         
-    }
-     header #branding h1 {
-         color: #E8491D; /* Accent color */
-         font-size: 1.8em;
-     }
-     .header-inner {
+/* Typography */
+body, footer {
+    font-family: 'Open Sans', sans-serif; /* A more modern font choice */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Distinct heading font */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Layout and Spacing */
+.container {
+    max-width: 1200px; /* Restricts the width for large screens */
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.section {
+    margin-bottom: 2rem; /* Adds more space below each section */
+}
+
+/* Header Styles */
+header {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+header .header-inner {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-     }
+    align-items: center;
+}
 
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 3px solid white;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 15px;
-    }
-    header nav ul {
-        float: right;
-        padding: 0;
-        list-style: none;
-        margin: 0;
-    }
-    header nav ul li {
-        display: inline;
-        margin-left: 15px;
-    }
-     /* Navigation links */
-     header nav ul li a {
-         color: #DDDDDD; /* Soft white text */
-         text-decoration: none;
-         font-weight: bold;
-         padding: 5px 10px;
-         display: inline-block;
-         position: relative; /* Needed for absolute positioning of before pseudo-element */
-     }
-     
-     /* Icon styles */
-     header nav ul li a:before {
-         font-family: 'FontAwesome';
-         color: inherit; /* Icon color matches the text color */
-         position: absolute;
-         left: 0;
-         top: 50%;
-         transform: translateY(-50%);
-         text-align: center;
-         width: 100%;
-     }
-     
-     /* Adjust the hover effect */
-     header nav ul li a:hover, header nav ul li a:hover:before {
-         color: #ffffff; /* White color on hover */
-         background-color: #e8491d; /* Orange color for the background on hover */
-         border-radius: 50%; /* Keeps the circular shape on hover */
-     }
-     /* Ensure icons are vertically aligned with the text */
-     header nav ul li a[class*="icon"]:before {
-         vertical-align: middle;
-     }
-    header nav ul li a[class*="icon"]:before {
-        margin-right: 5px;
-         }
-     /* Email icon */
-     .email-icon:before {
-         content: '\f0e0';
-     }
-     
-     /* LinkedIn icon */
-     .linkedin-icon:before {
-         content: '\f0e1';
-         color: #0077B5; /* LinkedIn blue */
-     }
-     
-     /* HuggingFace icon */
-     .huggingface-icon:before {
-         content: '\1F917';
-         color: #E8491D; /* Accent color */
-     }
+/* Profile Picture Styles */
+.profile-pic {
+    border-radius: 50%;
+    border: 3px solid var(--text-color);
+    width: 100%; /* Makes the image responsive */
+    max-width: 150px; /* Limits the maximum size */
+    height: auto; /* Keeps the aspect ratio */
+    display: inline-block;
+    margin-right: 15px;
+}
 
+/* Navigation Bar */
+header nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-     /* Hover effect for links and icons */
-     header nav ul li a:hover, header nav ul li a:hover:before {
-         color: #FFFFFF; /* White color on hover */
-         background-color: #E8491D; /* Accent color for the background on hover */
-         border-radius: 5px;
-     }
-    .section h2, .section h3 {
-        border-bottom: 1px solid #e8491d;
-        color: #333;
-        padding-bottom: 5px;
-    }
-    .section ul {
-        list-style: none;
-        padding-left: 0;
-    }
-    .section ul li {
-        background: url('bullet.png') no-repeat left center;
-        background-size: 10px 10px;
-        padding-left: 20px;
-        margin-bottom: 10px;
-        line-height: 1.6em;
-    }
-    .section p {
-        text-align: justify;
-    }
-    footer {
-        text-align: center;
-        padding: 10px 0;
-        background-color: #333;
-        color: white;
-        border-radius: 0 0 8px 8px;
-    }
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+/* Links and Buttons */
+a, button {
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+a:hover, button:hover {
+    transform: translateY(-2px); /* Slight raise effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: var(--accent-color); /* Accent color for the background on hover */
+    color: var(--text-color); /* White color text on hover */
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Section Headings */
+.section h2, .section h3 {
+    border-bottom: 1px solid var(--accent-color);
+    color: var(--primary-color);
+    padding-bottom: 5px;
+}
+
+/* Bullet Points in Lists */
+.section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section ul li {
+    background: url('bullet.png') no-repeat left center;
+    background-size: 10px 10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+/* Paragraph Text */
+.section p {
+    text-align: justify;
+}
 </style>
-
 
 </head>
 <body>
@@ -173,9 +150,9 @@
             </div>
             <nav>
                 <ul>
-                    <li class="current "><a href="mailto:alhajjarmohamed@gmail"><i class="fa-regular fa-envelope"></i>Email</a></li>
-                    <li class="current "><a href="https://www.linkedin.com/in/muhammed-alhajar/"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-                    <li class="current"><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
+                    <li><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
+                    <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
                     <!-- Additional links can be added here -->
                 </ul>
             </nav>
