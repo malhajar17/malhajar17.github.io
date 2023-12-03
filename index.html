@@ -34,33 +34,36 @@ header {
     background-color: var(--primary-color);
     color: var(--text-color);
     padding: 20px 0;
-    text-align: center;
 }
 
 header .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
 }
 
-/* Profile Picture Styles */
+/* Profile Picture and Branding Styles */
 .profile-pic {
     border-radius: 50%;
     border: 5px solid var(--accent-color);
     width: 150px;
     height: 150px;
+    float: left;
+    margin-right: 20px;
 }
 
-/* Header Branding and Tagline */
 header #branding {
-    flex: 1;
-    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adds spacing between branding and navigation */
 }
 
 header #branding h1 {
     font-size: 2.5em;
-    margin-bottom: 5px;
+    margin: 0;
     color: var(--accent-color);
 }
 
@@ -72,8 +75,9 @@ header #branding p {
 
 /* Navigation Styles */
 header nav {
-    flex: 1;
-    text-align: right;
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 20px; /* Adds space between the branding and the navigation */
 }
 
 header nav ul {
@@ -98,6 +102,18 @@ header nav ul li a:hover {
     color: var(--accent-color);
 }
 
+/* Main Body Styles */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: -30px; /* Adjusts the position to overlay on the header */
+}
+
 /* Footer Styles */
 footer {
     background: var(--secondary-color);
@@ -113,7 +129,11 @@ footer {
     }
 
     .profile-pic {
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
+    }
+
+    header #branding {
+        text-align: center;
     }
 
     header nav {
