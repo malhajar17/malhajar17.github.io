@@ -50,20 +50,24 @@ header .container {
     border: 5px solid var(--accent-color);
     width: 150px;
     height: 150px;
-    float: left;
     margin-right: 20px;
 }
 
 header #branding {
-    flex-grow: 1;
     display: flex;
     align-items: center;
+    justify-content: start;
+    flex-grow: 1;
     margin-bottom: 20px; /* Adds spacing between branding and navigation */
+}
+
+header #branding h1, header #branding p {
+    margin: 0;
+    padding: 0;
 }
 
 header #branding h1 {
     font-size: 2.5em;
-    margin: 0;
     color: var(--accent-color);
 }
 
@@ -111,7 +115,7 @@ header nav ul li a:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: -30px; /* Adjusts the position to overlay on the header */
+    margin-top: 30px; /* Adjusts the position to overlay on the header */
 }
 
 /* Footer Styles */
@@ -129,7 +133,7 @@ footer {
     }
 
     .profile-pic {
-        margin: 0 auto 20px;
+        margin-bottom: 20px;
     }
 
     header #branding {
@@ -146,7 +150,6 @@ footer {
     }
 }
 </style>
-
 
 </head>
 <body>
