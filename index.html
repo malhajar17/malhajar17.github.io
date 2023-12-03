@@ -9,200 +9,144 @@
 <style>
 /* Color Scheme */
 :root {
-    --primary-color: #5D5C61; /* Softened the dark gray */
-    --secondary-color: #7395AE; /* Added a complementary blue */
-    --accent-color: #E27D60; /* Softened the orange */
-    --text-color: #FFFFFF; /* Kept white for contrast */
-    --background-color: #E8A87C; /* A lighter complementary color for backgrounds */
+    --primary-color: #2c3e50; /* Dark blue */
+    --secondary-color: #34495e; /* Lighter blue */
+    --accent-color: #f39c12; /* Accent color - orange */
+    --text-color: #ecf0f1; /* Soft white */
 }
 
 /* Typography */
 body, footer {
-    font-family: 'Open Sans', sans-serif; /* A more modern font choice */
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: #ecf0f1;
+    color: #333;
 }
 
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif; /* Distinct heading font */
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-/* Layout and Spacing */
-.container {
-    max-width: 1200px; /* Restricts the width for large screens */
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-top: 30px;
-}
-
-.section {
-    margin-bottom: 2rem; /* Adds more space below each section */
+h1, h2, h3, p {
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Header Styles */
 header {
-     background: linear-gradient(to right, #333, #555);
+    background-color: var(--primary-color);
     color: var(--text-color);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-radius: 8px 8px 0 0;
-     
-     
-}
-header #branding {
-    text-align: left; /* If you want the text to be left-aligned */
-    display: flex;
-    align-items: center;
-     font-size: 2.2em;
-    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
 }
 
-header .header-inner {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10%;
 }
 
 /* Profile Picture Styles */
 .profile-pic {
     border-radius: 50%;
-    border: 3px solid var(--text-color);
-    width: 100%; /* Makes the image responsive */
-    max-width: 150px; /* Limits the maximum size */
-    height: auto; /* Keeps the aspect ratio */
-    display: inline-block;
-    margin-right: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--accent-color);
+    width: 150px;
+    height: 150px;
 }
 
-/* Navigation Bar */
+/* Header Branding and Tagline */
+header #branding {
+    flex: 1;
+    text-align: left;
+}
+
+header #branding h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+header #branding p {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+/* Navigation Styles */
 header nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    flex: 1;
+    text-align: right;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: flex-end;
 }
 
 header nav ul li {
-    margin-left: 15px;
-    padding: 10px 15px;
+    display: inline;
+    margin: 0 10px;
 }
+
 header nav ul li a {
-    padding: 5px 10px;
-     font-size: 1em;
     color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
+
 header nav ul li a:hover {
-    transform: scale(1.05); /* Slightly enlarges the link on hover */
+    color: var(--accent-color);
 }
 
-/* Links and Buttons */
-a, button {
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-a:hover, button:hover {
-    transform: translateY(-2px); /* Slight raise effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    background-color: var(--accent-color); /* Accent color for the background on hover */
-    color: var(--text-color); /* White color text on hover */
-    border-radius: 5px;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
-    background-color: var(--primary-color);
+    background: var(--secondary-color);
     color: var(--text-color);
     text-align: center;
     padding: 10px 0;
-    border-radius: 0 0 8px 8px;
 }
 
-/* Section Headings */
-.section h2, .section h3 {
-    border-bottom: 1px solid var(--accent-color);
-    color: var(--primary-color);
-    padding-bottom: 5px;
-}
-
-/* Bullet Points in Lists */
-.section ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.section ul li {
-    background: url('bullet.png') no-repeat left center;
-    background-size: 10px 10px;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    line-height: 1.6em;
-}
-
-/* Paragraph Text */
-.section p {
-    text-align: justify;
-}
-.tagline {
-    font-size: 1em;
-    color: #DDD;
-}
+/* Responsive Design */
 @media (max-width: 768px) {
-    header .header-inner {
+    header .container {
         flex-direction: column;
     }
 
-    header #branding {
+    .profile-pic {
         margin-bottom: 20px;
     }
 
-    header nav ul {
-        padding: 0;
+    header nav {
+        text-align: center;
     }
 
     header nav ul li {
         display: block;
-        text-align: center;
+        margin: 5px 0;
     }
 }
-     
 </style>
+
 
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <img src="mohamed.png" alt="Mohamed Alhajar" class="profile-pic">
-                    <div>
-                       <h1>Mohamed Alhajar (4 Languages Speaker)</h1>
-                       <p class="tagline">Passionate Machine Learning Engineer | Building the future of AI</p>
-                   </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
-                    <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
-                    <!-- Additional links can be added here -->
-                </ul>
-            </nav>
-        </div>
-    </header>
+     <header>
+         <div class="container">
+             <div id="branding">
+                 <img src="mohamed.png" alt="Mohamed Alhajar" class="profile-pic">
+                 <h1>Mohamed Alhajar</h1>
+                 <p>Passionate Machine Learning Engineer | Building the future of AI</p>
+             </div>
+             <nav>
+                 <ul>
+                     <li><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
+                     <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
+                     <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
+                 </ul>
+             </nav>
+         </div>
+     </header>
+
     
 
     <div class="container">
