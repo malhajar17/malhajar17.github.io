@@ -31,17 +31,16 @@ h1, h2, h3, p {
 
 /* Header Styles */
 header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Full-width background color */
     color: var(--text-color);
-    padding: 20px 0;
 }
 
-header .container {
+.container, .header-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 20px 10%;
+    margin: 0 auto;
 }
 
 /* Profile Picture and Branding Styles */
@@ -50,44 +49,37 @@ header .container {
     border: 5px solid var(--accent-color);
     width: 150px;
     height: 150px;
-    margin-right: 20px;
 }
 
-header #branding {
-    display: flex;
+.header-content {
     align-items: center;
-    justify-content: start;
     flex-grow: 1;
-    margin-bottom: 20px; /* Adds spacing between branding and navigation */
 }
 
-header #branding h1, header #branding p {
-    margin: 0;
-    padding: 0;
-}
-
-header #branding h1 {
+.header-content h1 {
     font-size: 2.5em;
+    margin: 0;
     color: var(--accent-color);
 }
 
-header #branding p {
+.header-content p {
     font-size: 1.2em;
     font-weight: 300;
+    margin: 0;
     color: var(--text-color);
 }
 
 /* Navigation Styles */
 header nav {
-    flex-basis: 100%;
     text-align: center;
-    margin-top: 20px; /* Adds space between the branding and the navigation */
+    padding: 10px 0; /* Adjust as needed for your design */
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: inline-block; /* Center the nav list */
 }
 
 header nav ul li {
@@ -109,13 +101,12 @@ header nav ul li a:hover {
 /* Main Body Styles */
 .container {
     width: 80%;
-    margin: auto;
     overflow: hidden;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 30px; /* Adjusts the position to overlay on the header */
+    margin-top: 30px; /* Adjusts the position relative to the header */
 }
 
 /* Footer Styles */
@@ -128,20 +119,17 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header .container {
+    .container, .header-content {
         flex-direction: column;
+        text-align: center;
     }
 
     .profile-pic {
         margin-bottom: 20px;
     }
 
-    header #branding {
-        text-align: center;
-    }
-
-    header nav {
-        text-align: center;
+    header nav ul {
+        display: block;
     }
 
     header nav ul li {
@@ -151,23 +139,24 @@ footer {
 }
 </style>
 
+
 </head>
 <body>
      <header>
-         <div class="container">
-             <div id="branding">
-                 <img src="mohamed.png" alt="Mohamed Alhajar" class="profile-pic">
+         <div class="container header-content">
+             <img src="mohamed.png" alt="Mohamed Alhajar" class="profile-pic">
+             <div>
                  <h1>Mohamed Alhajar</h1>
                  <p>Passionate Machine Learning Engineer | Building the future of AI</p>
              </div>
-             <nav>
-                 <ul>
-                     <li><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
-                     <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
-                     <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
-                 </ul>
-             </nav>
          </div>
+         <nav>
+             <ul>
+                 <li><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
+                 <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
+                 <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
+             </ul>
+         </nav>
      </header>
 
     
