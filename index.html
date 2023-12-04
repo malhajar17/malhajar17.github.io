@@ -33,15 +33,23 @@ h1, h2, h3, p {
 header {
     background-color: var(--primary-color);
     color: var(--text-color);
-    padding: 20px 0;
 }
 
-header .container {
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header-top {
+    display: flex;
+    width: 100%;
     align-items: center;
-    padding: 0 10%;
+    justify-content: space-between;
+    padding-bottom: 10px;
 }
 
 /* Profile Picture and Branding Styles */
@@ -53,25 +61,17 @@ header .container {
     margin-right: 20px;
 }
 
-header #branding {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-grow: 1;
-    margin-bottom: 20px; /* Adds spacing between branding and navigation */
+.header-top > div, .header-top > nav {
+    flex: 1;
 }
 
-header #branding h1, header #branding p {
-    margin: 0;
-    padding: 0;
-}
-
-header #branding h1 {
+.header-top h1 {
     font-size: 2.5em;
+    margin: 0;
     color: var(--accent-color);
 }
 
-header #branding p {
+.header-top p {
     font-size: 1.2em;
     font-weight: 300;
     color: var(--text-color);
@@ -79,9 +79,7 @@ header #branding p {
 
 /* Navigation Styles */
 header nav {
-    flex-basis: 100%;
-    text-align: center;
-    margin-top: 20px; /* Adds space between the branding and the navigation */
+    text-align: right;
 }
 
 header nav ul {
@@ -92,14 +90,14 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin-left: 10px;
 }
 
 header nav ul li a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
@@ -107,15 +105,13 @@ header nav ul li a:hover {
 }
 
 /* Main Body Styles */
-.container {
+.main-container {
     width: 80%;
-    margin: auto;
-    overflow: hidden;
+    margin: 30px auto 0;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 30px; /* Adjusts the position to overlay on the header */
 }
 
 /* Footer Styles */
@@ -124,24 +120,23 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 10px 0;
+    margin-top: 30px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header .container {
+    .container {
+        padding: 20px;
+    }
+
+    .header-top {
         flex-direction: column;
-    }
-
-    .profile-pic {
-        margin-bottom: 20px;
-    }
-
-    header #branding {
         text-align: center;
     }
 
-    header nav {
+    .header-top > nav {
         text-align: center;
+        padding-top: 10px;
     }
 
     header nav ul li {
@@ -151,25 +146,25 @@ footer {
 }
 </style>
 
+
 </head>
 <body>
-     <header>
-         <div class="container">
-             <div id="branding">
-                 <img src="mohamed.png" alt="Mohamed Alhajar" class="profile-pic">
-                 <h1>Mohamed Alhajar</h1>
-                 <p>Passionate Machine Learning Engineer | Building the future of AI</p>
-             </div>
-             <nav>
-                 <ul>
-                     <li><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
-                     <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
-                     <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
-                 </ul>
-             </nav>
-         </div>
-     </header>
-
+    <header>
+        <div class="container header-top">
+            <img src="mohamed.png" alt="Mohamed Alhajar" class="profile-pic">
+            <div>
+                <h1>Mohamed Alhajar</h1>
+                <p>Passionate Machine Learning Engineer | Building the future of AI</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
+                    <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     
 
     <div class="container">
