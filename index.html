@@ -103,28 +103,28 @@ header nav ul li a {
 header nav ul li a:hover {
     color: var(--accent-color);
 }
-/* Navigation Styles */
 .header-nav {
     background-color: var(--primary-color); /* Ensures the nav background matches the header */
-    text-align: center;
+    text-align: right; /* Aligns the nav to the right */
+    padding: 0; /* Adjust padding as needed */
 }
 
 .header-nav .container {
-    padding: 0 10%;
+    display: flex;
+    justify-content: flex-end; /* Aligns the container content to the end (right) */
+    padding: 0 10%; /* Matches the horizontal padding of the header-top content */
 }
 
 .header-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center; /* This will center the nav items */
-    align-items: center;
+    display: inline-block; /* Aligns the nav items inline */
 }
 
 .header-nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin-left: 10px;
 }
 
 .header-nav ul li a {
