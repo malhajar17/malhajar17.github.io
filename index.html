@@ -103,7 +103,40 @@ header nav ul li a {
 header nav ul li a:hover {
     color: var(--accent-color);
 }
+/* Navigation Styles */
+.header-nav {
+    background-color: var(--primary-color); /* Ensures the nav background matches the header */
+    text-align: center;
+}
 
+.header-nav .container {
+    padding: 0 10%;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* This will center the nav items */
+    align-items: center;
+}
+
+.header-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.header-nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+    color: var(--accent-color);
+}
 /* Main Body Styles */
 .main-container {
     width: 80%;
@@ -143,6 +176,7 @@ footer {
         display: block;
         margin: 5px 0;
     }
+     
 }
 </style>
 
@@ -156,14 +190,16 @@ footer {
                 <h1>Mohamed Alhajar</h1>
                 <p>Passionate Machine Learning Engineer | Building the future of AI</p>
             </div>
-            <nav>
+        </div>
+        <nav class="header-nav">
+            <div class="container">
                 <ul>
                     <li><a href="mailto:alhajjarmohamed@gmail" class="email-icon">Email</a></li>
                     <li><a href="https://www.linkedin.com/in/muhammed-alhajar/" class="linkedin-icon">LinkedIn</a></li>
                     <li><a href="https://huggingface.co/malhajar" class="huggingface-icon">HuggingFace</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
     
 
